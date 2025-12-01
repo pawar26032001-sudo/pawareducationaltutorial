@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pawar Educational Tutorial - Quality education for Maharashtra Board students. Expert coaching for all subjects.">
+    <meta name="description" content="Pawar Educational Tutorial - Quality education for Maharashtra Board students. Expert coaching by Professor Rahul Uttam Rao Pawar.">
     <title>Pawar Educational Tutorial - Maharashtra Board</title>
     <style>
         * {
@@ -43,6 +43,13 @@
         .header-content p {
             font-size: 1.2rem;
             opacity: 0.9;
+        }
+        
+        .professor-name {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            opacity: 0.95;
+            font-weight: 500;
         }
         
         nav {
@@ -103,6 +110,7 @@
             border-radius: 50px;
             font-weight: 600;
             transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0.5rem;
         }
         
         .cta-button:hover {
@@ -173,6 +181,66 @@
             background: white;
         }
         
+        .notes-section {
+            background: linear-gradient(rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+        }
+        
+        .notes-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
         .contact {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -197,6 +265,16 @@
             padding: 1rem;
             border-radius: 10px;
             backdrop-filter: blur(10px);
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
         }
         
         footer {
@@ -228,6 +306,7 @@
             <div class="header-content">
                 <h1>🎓 Pawar Educational Tutorial</h1>
                 <p>Excellence in Maharashtra Board Education</p>
+                <p class="professor-name">By Professor Rahul Uttam Rao Pawar</p>
             </div>
         </div>
     </header>
@@ -237,6 +316,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#notes">Free Notes</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -247,6 +327,7 @@
             <h2>Welcome to Quality Education</h2>
             <p>Empowering Maharashtra Board students with comprehensive coaching, expert guidance, and proven teaching methodologies. Join us to achieve academic excellence and build a strong foundation for your future.</p>
             <a href="#contact" class="cta-button">Enroll Now</a>
+            <a href="#notes" class="cta-button">Download Free Notes</a>
         </div>
     </section>
     
@@ -255,8 +336,8 @@
             <h2 class="section-title">Why Choose Us?</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>📚 Expert Faculty</h3>
-                    <p>Experienced teachers with deep knowledge of Maharashtra Board curriculum and examination patterns.</p>
+                    <h3>👨‍🏫 Expert Faculty</h3>
+                    <p>Learn from Professor Rahul Uttam Rao Pawar with extensive experience in Maharashtra Board curriculum and examination patterns.</p>
                 </div>
                 <div class="card">
                     <h3>🎯 Focused Learning</h3>
@@ -280,14 +361,75 @@
             <div class="subject-list">
                 <span class="subject-tag">Mathematics</span>
                 <span class="subject-tag">Science</span>
+                <span class="subject-tag">Physics</span>
+                <span class="subject-tag">Chemistry</span>
+                <span class="subject-tag">Biology</span>
                 <span class="subject-tag">English</span>
                 <span class="subject-tag">Marathi</span>
                 <span class="subject-tag">Hindi</span>
                 <span class="subject-tag">History</span>
                 <span class="subject-tag">Geography</span>
-                <span class="subject-tag">Physics</span>
-                <span class="subject-tag">Chemistry</span>
-                <span class="subject-tag">Biology</span>
+            </div>
+        </div>
+    </section>
+    
+    <section id="notes" class="section notes-section">
+        <div class="container">
+            <h2 class="section-title">📚 Download Free Maharashtra Board Notes</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Get comprehensive Science and Mathematics notes prepared by Pawar Educational Tutorial</p>
+            
+            <div class="notes-form">
+                <form id="notesForm">
+                    <div class="form-group">
+                        <label for="studentName">Student Name *</label>
+                        <input type="text" id="studentName" name="studentName" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="class">Select Class *</label>
+                        <select id="class" name="class" required>
+                            <option value="">Choose your class</option>
+                            <option value="8">Class 8</option>
+                            <option value="9">Class 9</option>
+                            <option value="10">Class 10</option>
+                            <option value="11">Class 11</option>
+                            <option value="12">Class 12</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Select Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choose subject</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="science">Science (General)</option>
+                            <option value="physics">Physics</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="biology">Biology</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Any specific topics you need help with?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">📥 Request Notes PDF</button>
+                </form>
+                
+                <p style="text-align: center; margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
+                    Notes will be sent to your email within 24 hours. For immediate assistance, call <strong>7499849545</strong>
+                </p>
             </div>
         </div>
     </section>
@@ -321,13 +463,16 @@
             <h2>Get In Touch</h2>
             <div class="contact-info">
                 <div class="contact-item">
+                    <strong>👨‍🏫 Professor:</strong> Rahul Uttam Rao Pawar
+                </div>
+                <div class="contact-item">
+                    <strong>📱 Phone:</strong> <a href="tel:+917499849545">+91 7499849545</a>
+                </div>
+                <div class="contact-item">
                     <strong>📧 Email:</strong> info@pawareducationaltutorial.com
                 </div>
                 <div class="contact-item">
-                    <strong>📱 Phone:</strong> +91 XXXXX XXXXX
-                </div>
-                <div class="contact-item">
-                    <strong>📍 Address:</strong> Maharashtra, India
+                    <strong>📍 Location:</strong> Maharashtra, India
                 </div>
                 <div class="contact-item">
                     <strong>🕐 Timing:</strong> Mon-Sat: 8:00 AM - 8:00 PM
@@ -339,8 +484,32 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 Pawar Educational Tutorial. All rights reserved.</p>
-            <p>Dedicated to Maharashtra Board Excellence</p>
+            <p>Dedicated to Maharashtra Board Excellence | Professor Rahul Uttam Rao Pawar</p>
         </div>
     </footer>
+    
+    <script>
+        document.getElementById('notesForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                studentName: document.getElementById('studentName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                class: document.getElementById('class').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Display success message
+            alert('Thank you for your request!\n\nYour Maharashtra Board ' + formData.subject + ' notes for Class ' + formData.class + ' will be sent to ' + formData.email + ' within 24 hours.\n\nFor immediate assistance, please call Professor Rahul Pawar at 7499849545.\n\n- Pawar Educational Tutorial');
+            
+            // Reset form
+            this.reset();
+            
+            // In a real implementation, this would send data to a backend server
+            console.log('Form submitted:', formData);
+        });
+    </script>
 </body>
 </html>
