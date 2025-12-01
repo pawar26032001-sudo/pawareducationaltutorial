@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pawar Educational Tutorial - Quality education for Maharashtra Board students. Expert coaching for all subjects.">
+    <title>Pawar Educational Tutorial - Maharashtra Board</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-content {
+            text-align: center;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            padding: 1rem 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #764ba2;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 3rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .card p {
+            color: #666;
+        }
+        
+        .subjects {
+            background: #f8f9fa;
+        }
+        
+        .subject-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .subject-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+        
+        .features {
+            background: white;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>🎓 Pawar Educational Tutorial</h1>
+                <p>Excellence in Maharashtra Board Education</p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Quality Education</h2>
+            <p>Empowering Maharashtra Board students with comprehensive coaching, expert guidance, and proven teaching methodologies. Join us to achieve academic excellence and build a strong foundation for your future.</p>
+            <a href="#contact" class="cta-button">Enroll Now</a>
+        </div>
+    </section>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>📚 Expert Faculty</h3>
+                    <p>Experienced teachers with deep knowledge of Maharashtra Board curriculum and examination patterns.</p>
+                </div>
+                <div class="card">
+                    <h3>🎯 Focused Learning</h3>
+                    <p>Structured courses designed to cover entire syllabus with emphasis on concept clarity and problem-solving.</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Regular Assessment</h3>
+                    <p>Periodic tests, mock exams, and detailed performance analysis to track student progress.</p>
+                </div>
+                <div class="card">
+                    <h3>💡 Individual Attention</h3>
+                    <p>Small batch sizes ensuring personalized attention and doubt-clearing sessions for every student.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="subjects" class="section subjects">
+        <div class="container">
+            <h2 class="section-title">Subjects We Teach</h2>
+            <div class="subject-list">
+                <span class="subject-tag">Mathematics</span>
+                <span class="subject-tag">Science</span>
+                <span class="subject-tag">English</span>
+                <span class="subject-tag">Marathi</span>
+                <span class="subject-tag">Hindi</span>
+                <span class="subject-tag">History</span>
+                <span class="subject-tag">Geography</span>
+                <span class="subject-tag">Physics</span>
+                <span class="subject-tag">Chemistry</span>
+                <span class="subject-tag">Biology</span>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features" class="section features">
+        <div class="container">
+            <h2 class="section-title">Our Features</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>📖 Study Material</h3>
+                    <p>Comprehensive notes, practice papers, and reference materials aligned with Maharashtra Board syllabus.</p>
+                </div>
+                <div class="card">
+                    <h3>🏆 Proven Results</h3>
+                    <p>Track record of excellent board exam results with students scoring distinction marks consistently.</p>
+                </div>
+                <div class="card">
+                    <h3>⏰ Flexible Timings</h3>
+                    <p>Multiple batch options to accommodate different schedules and learning preferences.</p>
+                </div>
+                <div class="card">
+                    <h3>👨‍👩‍👧 Parent Involvement</h3>
+                    <p>Regular parent-teacher meetings and progress reports to keep parents informed and engaged.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📧 Email:</strong> info@pawareducationaltutorial.com
+                </div>
+                <div class="contact-item">
+                    <strong>📱 Phone:</strong> +91 XXXXX XXXXX
+                </div>
+                <div class="contact-item">
+                    <strong>📍 Address:</strong> Maharashtra, India
+                </div>
+                <div class="contact-item">
+                    <strong>🕐 Timing:</strong> Mon-Sat: 8:00 AM - 8:00 PM
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pawar Educational Tutorial. All rights reserved.</p>
+            <p>Dedicated to Maharashtra Board Excellence</p>
+        </div>
+    </footer>
+</body>
+</html>
